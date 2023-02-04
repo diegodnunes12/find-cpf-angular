@@ -2,17 +2,27 @@
 
 .top-navbar {
   background: white;
-	height: 100px;
+	height: auto;
 	display: flex;
 	align-items: center;
-	padding: 0 30px;
+	padding: 15px;
 
-  .color-dark {
+  .header {
+    font-family: 'Exo 2', sans-serif;
     color: map-get($colors, dark);
+
+    &.header-primary {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+    }
   }
 
   .breadcrumb {
     color: map-get($colors, gray);
-    line-height: 200%;
+    line-height: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
   }
 }
