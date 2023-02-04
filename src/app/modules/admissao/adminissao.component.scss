@@ -7,7 +7,7 @@
     transition: all 0.5s ease;
 
     .container {
-      background-color: lighten(map-get($colors, primary), 60%);
+      background-color: map-get($colors, primary10);;
       padding: 0;
       line-height: 28px;
       height: calc(100vh - 200px);

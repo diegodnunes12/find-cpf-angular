@@ -1,104 +1,65 @@
 @import "../../../../../assets/styles/colors.scss";
 
-.stepper {
-  max-width: 1000px;
-  margin: 0 auto;
-
-  ol {
-    display: flex;
-
-    li {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      text-align: center;
-      width: 30px;
-
-      &.active {
-        &:before {
-        background-color: white;
-        border: solid 1px map-get($colors, primary);
-        }
-      }
-
-      &.future {
-        &:before {
-          background-color: lighten(map-get($colors, primary), 70%);
-          border: solid 1px lighten(map-get($colors, primary), 70%);
-        }
-      }
-
-      &:before {
-        content: "";
-        display: block;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        margin: 0 auto 1rem;
-      }
-
-      &:not(:last-child) {
-        &:after {
-          content: "";
-          position: relative;
-          top: 11px;
-          width: 100%;
-          left: 137px;
-          height: 2px;
-          background-color: #e0e0e0;
-          order: -1;
-        }
-      }
-    }
-  }
-}
-
-.c-stepper__item {
+.stepper-wrapper {
+  margin: 0 auto 20px;
+  padding: 50px 0;
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-width: 500px;
 
-  &:before {
-    --size: 3rem;
-    content: "";
-    display: block;
-    width: var(--circle-size);
-    height: var(--circle-size);
-    border-radius: 50%;
-    background-color: lightgrey;
-    background-color: red;
-    opacity: 0.5;
-    margin: 0 auto 1rem;
-  }
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
 
-  &:not(:last-child) {
-    &:after {
+    &::after {
+      position: absolute;
       content: "";
+      border-bottom: 2px solid map-get($colors, primary20);
+      width: 100%;
+      top: 9px;
+      left: 50%;
+      z-index: 2;
+    }
+
+    .circle {
       position: relative;
-      top: calc(var(--circle-size) / 2);
-      width: calc(100% - var(--circle-size) - calc(var(--spacing) * 2));
-      left: calc(50% + calc(var(--circle-size) / 2 + var(--spacing)));
-      height: 2px;
-      background-color: #e0e0e0;
-      order: -1;
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: map-get($colors, primary20);
+      border: 1px solid map-get($colors, primary20);
+      margin-bottom: 6px;
+    }
+
+    .name {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.41px;
+    }
+
+    &.active {
+      .circle {
+        background-color: lighten(map-get($colors, primary), 80%);
+        border: 1px solid map-get($colors, primary);
+      }
+
+      .name {
+        color: map-get($colors, primary);
+      }
+    }
+
+    &:last-child::after {
+      content: none;
     }
   }
 }
-
-.c-stepper__title {
-  font-weight: bold;
-  font-size: clamp(1rem, 4vw, 1.25rem);
-  margin-bottom: 0.5rem;
-}
-
-.c-stepper__desc {
-  color: grey;
-  font-size: clamp(0.85rem, 2vw, 1rem);
-  padding-left: var(--spacing);
-  padding-right: var(--spacing);
-}
-
-/*** Non-demo CSS ***/
-
 
