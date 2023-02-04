@@ -8,32 +8,20 @@
   text-transform: capitalize;
 }
 
-
-
-/* .header-subtitle {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.breadcrumb {
-  color: map-get($colors, gray);
-  line-height: 18px;
+.button {
   font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
+  border-radius: 2px;
+  padding: 8px 16px;
 }
 
-.text-transform-uppercase {
-  text-transform: uppercase;
+.button-primary {
+  background-color: #165C7D;
+  border: solid 1px #165C7D;
+  color: white;
 }
 
-.text-transform-capitalize {
-  text-transform: capitalize;
+.button-secondary {
+  background-color: white;
+  border: solid 1px #165C7D;
+  color: #165C7D;
 }
-
-.title-page {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-} */
