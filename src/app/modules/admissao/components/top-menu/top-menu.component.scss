@@ -6,6 +6,7 @@
 	display: flex;
 	align-items: center;
 	margin: 15px;
+  justify-content: space-between;
 
   .header {
     font-family: 'Exo 2', sans-serif;
@@ -24,5 +25,55 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 400;
+  }
+
+  .account-info {
+    color: map-get($colors, primary);
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    align-items: center;
+
+    .notification {
+      position: relative;
+
+      i {
+        font-size: 24px;
+      }
+
+      div {
+        background-color: map-get($colors, danger);
+            font-size: 12px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+      }
+    }
+
+    .company {
+      font-family: "Exo 2", open-sans;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 700;
+      border: solid 1px map-get($colors, primary);
+      padding: 7px 15px;
+      border-radius: 15px;
+      text-transform: uppercase;
+    }
+
+    .user {
+      img {
+        width: 32px;
+        border: solid 1px map-get($colors, primary);
+        border-radius: 50%;
+      }
+    }
   }
 }

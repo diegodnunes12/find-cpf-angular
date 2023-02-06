@@ -12,7 +12,7 @@ export class SideMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public teste() {
+  /* public active() {
     document.querySelector("body").classList.toggle("active");
-  }
+  } */
 }

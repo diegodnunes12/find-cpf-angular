@@ -9,6 +9,32 @@
 	height: 100%;
 	padding: 20px 0;
 	transition: all 0.5s ease;
+
+  .hamburger {
+    .item-menu {
+      margin: auto;
+      text-align: center;
+      margin-top: 35px;
+      color: white;
+
+      &.bar {
+        color: map-get($colors, primary60)
+      }
+
+      i {
+        font-size: 25px;
+      }
+    }
+
+    .logo {
+      text-align: center;
+      img {
+        width: 60px;
+      }
+    }
+  }
+
+
 }
 
 ::ng-deep {
