@@ -18,7 +18,7 @@
       color: white;
 
       &.bar {
-        color: map-get($colors, primary60)
+        color: map-get($colors, primary60);
       }
 
       i {

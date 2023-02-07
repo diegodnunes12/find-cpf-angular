@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./find-cpf.component.scss']
 })
 export class FindCpfComponent implements OnInit {
-  public cpf = new FormControl('');
+  public cpf = new FormControl('', [Validators.required, Validators.maxLength(11), Validators.minLength(11)]);
 
   constructor(private route: Router) { }
 
@@ -16,7 +16,8 @@ export class FindCpfComponent implements OnInit {
 
   public findCpf($event) {
     $event.preventDefault();
-    this.route.navigate([this.cpf.value]);
+    const cpf = this.cpf.value.replaceAll(".", "").replaceAll("-", "");
+    this.route.navigate([cpf]);
   }
 
 }

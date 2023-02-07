@@ -1,6 +1,49 @@
 <div class="container">
   <app-find-cpf></app-find-cpf>
   <ng-container *ngIf="{info: (info$ | async)} as data">
-    {{ data.info | json }}
+    <div class="info" *ngIf="data.info">
+      <div class="card">
+        <span class="title">Situação cadastral do CPF</span>
+        <span class="subtitle">Consulta na Receita Federal</span>
+        <div class="items">
+          <div class="icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <span class="subtitle">Nome</span>
+            <span class="description">{{ data.info.name }}</span>
+          </div>
+        </div>
+        <div class="items">
+          <div class="icon icon-success">
+            <i class="fa-regular fa-circle-check"></i>
+          </div>
+          <div>
+            <span class="subtitle">Situação do CPF</span>
+            <span class="description">Regular</span>
+          </div>
+        </div>
+      </div>
+      <ng-container *ngFor="let account of data.info.accounts">
+        <div class="card">
+          <span class="title text-transform-capitalize">{{ account.type }}</span>
+          <span class="subtitle">Cooperativa Viacredi</span>
+          <div class="items">
+            <div class="icon">
+              <i class="fa-regular fa-credit-card"></i>
+            </div>
+            <div>
+              <span class="subtitle">Número da conta</span>
+              <span class="description">{{ account.number }}</span>
+            </div>
+          </div>
+          <div class="items">
+            <div>
+              <span class="link">Duplicar conta</span>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
   </ng-container>
 </div>
