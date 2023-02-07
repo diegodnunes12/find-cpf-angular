@@ -1,3 +1,6 @@
 <div class="container">
   <app-find-cpf></app-find-cpf>
+  <ng-container *ngIf="{info: (info$ | async)} as data">
+    {{ data.info | json }}
+  </ng-container>
 </div>

@@ -9,6 +9,7 @@ import { BottomMenuComponent } from './components/bottom-menu/bottom-menu.compon
 import { InformationComponent } from './views/information/information.component';
 import { FindCpfComponent } from './components/find-cpf/find-cpf.component';
 import { StepperComponent } from './components/stepper/stepper.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,6 +18,7 @@ import { StepperComponent } from './components/stepper/stepper.component';
   imports: [
     CommonModule,
     AdminissaoRoutingModule,
+    ReactiveFormsModule,
   ]
 })
 export class AdmissaoModule { }

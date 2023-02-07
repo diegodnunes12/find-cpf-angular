@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,14 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./find-cpf.component.scss']
 })
 export class FindCpfComponent implements OnInit {
+  public cpf = new FormControl('');
 
   constructor(private route: Router) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  public findCpf() {
-    this.route.navigate(["/info"])
+  public findCpf($event) {
+    $event.preventDefault();
+    this.route.navigate([this.cpf.value]);
   }
 
 }
