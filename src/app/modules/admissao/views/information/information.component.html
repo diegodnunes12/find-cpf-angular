@@ -1,7 +1,7 @@
 <div class="container">
   <app-find-cpf></app-find-cpf>
   <ng-container *ngIf="{info: (info$ | async)} as data">
-    <div class="info" *ngIf="data.info">
+    <div class="info" *ngIf="data.info; else noInfo">
       <div class="card">
         <span class="title">Situação cadastral do CPF</span>
         <span class="subtitle">Consulta na Receita Federal</span>
@@ -45,5 +45,10 @@
         </div>
       </ng-container>
     </div>
+    <ng-template #noInfo>
+      <div class="alert">
+        Cliente não localizado, por favor faça uma nova busca
+      </div>
+    </ng-template>
   </ng-container>
 </div>

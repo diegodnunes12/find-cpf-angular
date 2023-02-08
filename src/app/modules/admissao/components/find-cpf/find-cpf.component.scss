@@ -48,4 +48,11 @@ p {
   .margin {
     margin-left: 20px;
   }
+
+  .message {
+    color: map-get($colors, danger);
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+  }
 }

@@ -1,7 +1,7 @@
 [
   {
     "name": "Mariane de Souza Oliveira",
-    "cpf": "11122233344",
+    "cpf": "46995257090",
     "accounts": [
       {
         "type": "conta aplicação",
@@ -10,6 +10,38 @@
       {
         "type": "conta corrente",
         "number": "778461-8"
+      }
+    ]
+  },
+  {
+    "name": "Paulo José Moreira",
+    "cpf": "45909822004",
+    "accounts": [
+      {
+        "type": "conta aplicação",
+        "number": "567934-5"
+      },
+      {
+        "type": "conta poupança",
+        "number": "118461-9"
+      }
+    ]
+  },
+  {
+    "name": "Paola Giovanna Silva",
+    "cpf": "46527821018",
+    "accounts": [
+      {
+        "type": "conta aplicação",
+        "number": "337932-4"
+      },
+      {
+        "type": "conta corrente",
+        "number": "773361-4"
+      },
+      {
+        "type": "conta poupança",
+        "number": "778433-4"
       }
     ]
   }
